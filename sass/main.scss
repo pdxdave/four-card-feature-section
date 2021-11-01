@@ -1,0 +1,134 @@
+@import 'reset';
+@import 'variables';
+
+main {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+body {
+    font-family: $ff;
+    font-size: .9735px;
+}
+h1 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.2rem;
+}
+p {
+    font-size: .9rem;
+    color: $clr-grayish-blue;
+}
+
+header {
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+
+    h1 {
+      font-weight:$fw-xtra-light;  
+      text-align: center;
+      padding: 2rem 0;
+
+      span {
+          display: block;
+          font-weight: $fw-semi-bold;
+      }
+   }
+   p {
+       text-align: center;
+       padding-bottom: 2rem;
+   }
+
+   @media (min-width: 800px){
+       max-width: 500px;
+
+       h1 {
+           font-size: 2rem;
+       }
+       p {
+           font-size: 1rem;
+       }
+   }
+}
+
+/********** CARDS **********/
+.cards {
+    width: 350px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 1110px){
+        width: 1110px;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 120px 120px 120px 120px;
+
+
+        .supervisor {
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+        .builder {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+        .karma {
+            grid-column: 2 / 3;
+            grid-row: 3 / 5;
+        }
+        .calculator {
+            grid-column: 3 / 4;
+            grid-row: 2 / 4;
+        }
+    }
+}
+
+/************* CARD *************/
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35px 60px 1fr;
+
+    margin: 1rem 1rem;
+    padding: 1.2rem;
+
+    box-shadow: 0px 4px 4px 2px rgba(217, 217, 217, .3);
+    border-radius: 4px;
+
+   
+    &.supervisor {
+        border-top: 3px solid $clr-cyan;
+        img {
+            grid-column: 1;
+            grid-row: 3 / 4;
+            margin-left: auto;
+        }
+    }
+    &.builder {
+        border-top: 3px solid $clr-red;
+        img {
+            grid-column: 1;
+            grid-row: 3 / 4;
+            margin-left: auto;
+        }
+    }
+    &.karma {
+        border-top: 3px solid $clr-orange;
+        img {
+            grid-column: 1;
+            grid-row: 3 / 4;
+            margin-left: auto;
+        }
+    }
+    &.calculator {
+        border-top: 3px solid $clr-blue;
+        img {
+            grid-column: 1;
+            grid-row: 3 / 4;
+            margin-left: auto;
+        }
+    }
+}

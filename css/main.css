@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: .9735px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: .9rem;
+  color: #a3a5ae;
+}
+
+header {
+  max-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-weight: 200;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+header h1 span {
+  display: block;
+  font-weight: 600;
+}
+
+header p {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 800px) {
+  header {
+    max-width: 500px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+}
+
+/********** CARDS **********/
+.cards {
+  width: 350px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1110px) {
+  .cards {
+    width: 1110px;
+    max-width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 120px 120px 120px 120px;
+        grid-template-rows: 120px 120px 120px 120px;
+  }
+  .cards .supervisor {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .cards .builder {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+  }
+  .cards .karma {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3 / 5;
+  }
+  .cards .calculator {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+}
+
+/************* CARD *************/
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 35px 60px 1fr;
+      grid-template-rows: 35px 60px 1fr;
+  margin: 1rem 1rem;
+  padding: 1.2rem;
+  -webkit-box-shadow: 0px 4px 4px 2px rgba(217, 217, 217, 0.3);
+          box-shadow: 0px 4px 4px 2px rgba(217, 217, 217, 0.3);
+  border-radius: 4px;
+}
+
+.card.supervisor {
+  border-top: 3px solid #45d3d3;
+}
+
+.card.supervisor img {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  margin-left: auto;
+}
+
+.card.builder {
+  border-top: 3px solid #ea5353;
+}
+
+.card.builder img {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  margin-left: auto;
+}
+
+.card.karma {
+  border-top: 3px solid #fcaf4a;
+}
+
+.card.karma img {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  margin-left: auto;
+}
+
+.card.calculator {
+  border-top: 3px solid #549ef2;
+}
+
+.card.calculator img {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  margin-left: auto;
+}
